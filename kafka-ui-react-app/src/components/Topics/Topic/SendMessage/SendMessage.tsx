@@ -83,7 +83,7 @@ const SendMessage: React.FC<Props> = ({
     partition: number;
   }) => {
     if (messageSchema) {
-      const key = data.key || keyExampleValue;
+      const key = data.key.length > 0 ? data.key : '';
       const content = data.content || contentExampleValue;
       const { partition } = data;
       const headers = data.headers ? JSON.parse(data.headers) : undefined;
