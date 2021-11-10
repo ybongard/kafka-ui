@@ -211,7 +211,7 @@ describe('Thunks', () => {
         {}
       );
       fetchMock.getOnce(
-        `/api/clusters/${clusterName}/connectors`,
+        `/api/clusters/${clusterName}/connectors?search=`,
         connectorsServerPayload
       );
       await store.dispatch(
