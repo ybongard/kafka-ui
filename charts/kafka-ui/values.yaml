@@ -23,7 +23,10 @@ existingConfigMap: ""
 existingSecret: ""
 envs:
   secret: {}
-  config: {}
+  config: {
+    KAFKA_CLUSTERS_0_NAME: dev-kafka,
+    KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: dev-kafka-bootstrap.kafka-global-dev.svc:9092
+  }
 
 podAnnotations: {}
 
